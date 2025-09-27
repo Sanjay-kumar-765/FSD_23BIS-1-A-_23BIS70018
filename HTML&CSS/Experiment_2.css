@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.balance {
+  font-size: 36px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 25px;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: white;
+  border: none;
+  /* border-radius: 8px; */
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.deposit {
+  background-color: green
+}
+
+.withdraw {
+  background-color: red;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .dashboard{
+            display: grid;
+            grid-template-areas:
+            "header header"
+            "sidebar main-content"
+            "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr;
+            height: 100vh;
+            
+        }
+        .header{
+            grid-area: header;
+            background-color: var(--header-bg);
+            color: var(--header-color);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        
+            align-items: center;        
+        }
+        .sidebar{
+            grid-area:sidebar;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-color);
+            padding: 20px;
+        }
+        .main-content{
+            grid-area: main-content;
+            background-color: var(--main-bg);
+            color: var(--main-color);
+            padding:20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: var(--footer-bg);
+            color: var(--footer-color);
+            text-align: center;
+            padding: 10px;
+        }
+        :root{
+            --header-bg: #f8f9fa;
+            --header-color: #343a40;
+            --sidebar-bg: #e9ecef;
+            --sidebar-color: #343a40;
+            --main-bg: #ffffff;
+            --main-color: #343a40;
+            --footer-bg: #f8f9fa;
+            --footer-color: #343a40;
+        }
+        body.dark-mode{
+            --header-bg: #343a40;
+            --header-color: #f8f9fa;
+            --sidebar-bg: #495057;
+            --sidebar-color: #f8f9fa;
+            --main-bg: #343a40;
+            --main-color: #f8f9fa;
+            --footer-bg: #343a40;
+            --footer-color: #f8f9fa;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Admin Dashboard</h1>
+            <button id="theme-switcher">Switch to dark mode</button>
+
+        </header>
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Udsers</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <h2> Welcome to the admin board</h2>
+            <p> this is a place holder for report</p>
+
+        </main>
+        <footer class="'footer">
+            <p>&copy; 2023 Ciompany, rights protected</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('theme-switcher').addEventListener('click',function(){
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            this.textContent =  isDarkMode ? 'switch to light mode':'Switch to dark mode';
+
+        });
+    </script>
+</body>
+</html>
